@@ -1,0 +1,100 @@
+"Free Application for Federal Student Aid (FAFSA)
+By Various Demographic Characteristics
+2012/13 Application Cycle",,,,,,,,
+Data Element and Value,Initial Application,,,,,,,Final Transaction
+,2012,,,,2013,,Total,Total
+,Q1,Q2,Q3,Q4,Q5,Q6+,,
+Total (Applicant Count),"9,258,079","5,749,582","3,747,657","1,626,353","942,619","480,418","21,804,708","21,804,708"
+Gender,,,,,,,,
+Female,"5,658,628","3,504,836","2,189,507","950,494","545,728","287,717","13,136,910","13,153,555"
+Male,"3,571,882","2,223,372","1,540,212","665,467","390,387","188,970","8,580,290","8,577,985"
+Blank,"27,569","21,374","17,938","10,392","6,504","3,731","87,508","73,168"
+Age,,,,,,,,
+18 or Less,"1,215,186","326,236","184,448","146,813","82,295","56,236","2,011,214","2,010,647"
+19 through 24,"4,820,323","2,702,523","1,609,809","552,851","288,889","130,229","10,104,624","10,106,695"
+25 or Greater,"3,222,492","2,720,730","1,953,345","926,654","571,412","293,943","9,688,576","9,687,277"
+Age Unknown,78,93,55,35,23,10,294,89
+Grade Entering,,,,,,,,
+"1st Year, Never Attended College Before","2,285,649","1,117,875","912,668","582,751","345,776","196,655","5,441,374","5,466,938"
+"1st Year, Attended College Before","1,258,972","1,128,435","901,029","446,895","271,564","134,863","4,141,758","4,307,886"
+2nd Year/Sophomore,"1,930,935","1,175,863","641,528","177,683","91,575","38,429","4,056,013","4,089,137"
+3rd Year/Junior,"1,523,312","853,426","447,437","128,458","68,098","28,532","3,049,263","3,004,651"
+4th Year/Senior,"924,266","497,062","241,307","53,416","26,448","10,690","1,753,189","1,753,541"
+5th Year/Other Undergraduate,"327,594","231,986","151,509","46,822","26,764","12,246","796,921","805,147"
+1st Year Graduate/Professional,"399,170","267,424","164,203","83,201","52,101","27,620","993,719","956,777"
+Continuing Graduate/Professional,"607,968","477,161","287,591","106,935","60,152","31,319","1,571,126","1,419,656"
+Blank,213,350,385,192,141,64,"1,345",975
+Degree Pursuing,,,,,,,,
+1st Bachelor's Degree,"5,188,817","2,361,211","1,268,923","464,345","260,575","121,800","9,665,671","9,615,837"
+2nd Bachelor's Degree,"80,916","62,162","41,984","21,365","10,988","5,545","222,960","218,656"
+Associate Degree (Occupational or Technical),"1,083,976","974,957","715,044","339,503","195,039","105,398","3,413,917","3,435,408"
+Associate Degree (General Education or Transfer),"1,023,837","809,235","586,348","242,456","127,818","61,290","2,850,984","2,889,738"
+Certificate or Diploma (Less than 2 Years),"275,677","394,106","351,565","191,421","152,686","86,571","1,452,026","1,537,314"
+Certificate or Diploma (At Least 2 Years),"146,171","133,024","104,407","49,748","25,180","13,098","471,628","471,123"
+Teaching Credential (Nondegree),"26,242","20,150","17,709","8,692","5,369","3,335","81,497","79,786"
+Graduate or Professional Degree,"946,426","659,183","380,392","152,246","92,104","48,403","2,278,754","2,259,505"
+Other/Undecided,"461,363","317,038","265,169","145,625","67,134","31,699","1,288,028","1,221,601"
+Blank,"24,654","18,516","16,116","10,952","5,726","3,279","79,243","75,740"
+Parent Education Level,,,,,,,,
+Neither Parent Completed College or Beyond,"4,413,266","2,945,321","2,039,576","933,254","551,057","287,381","11,169,855","11,171,195"
+One Parent Completed College or Beyond,"2,512,078","1,576,720","1,013,064","421,785","237,759","118,576","5,879,982","5,879,468"
+Both Parents Completed College or Beyond,"2,332,735","1,227,541","695,017","271,314","153,803","74,461","4,754,871","4,754,045"
+Pell Eligibility Status,,,,,,,,
+Pell Eligible,"4,864,775","3,175,359","2,151,609","940,253","578,993","308,182","12,019,171","13,234,806"
+Pell Ineligible,"4,393,304","2,574,223","1,596,048","686,100","363,626","172,236","9,785,537","8,569,902"
+Dependency Status,,,,,,,,
+Dependent,"4,925,670","2,215,911","1,209,310","413,854","214,952","102,774","9,082,471","9,168,010"
+Independent,"4,332,409","3,533,671","2,538,347","1,212,499","727,667","377,644","12,722,237","12,636,698"
+Renewal Application Status,,,,,,,,
+Original,"3,872,544","2,569,661","2,086,817","1,259,175","783,009","410,868","10,982,074",N/A
+Renewal,"5,385,535","3,179,921","1,660,840","367,178","159,610","69,550","10,822,634",N/A
+Source of Application/Correction,,,,,,,,
+FAFSA on the Web (FOTW),"9,213,564","5,642,263","3,640,606","1,575,855","911,176","462,889","21,446,353","17,402,369"
+Web Financial Aid Administrator (Web FAA),"20,533","45,720","50,491","22,368","20,096","12,577","171,785","1,317,164"
+Other Electronic (School Batch),"5,852","45,279","46,379","22,501","7,396","3,330","130,737","2,857,530"
+Paper FAFSA,"16,712","15,185","9,371","5,286","3,799","1,562","51,915","157,723"
+FAFSA on the Phone/FSAIC Correction,"1,418","1,135",810,343,152,60,"3,918","69,922"
+Schools Listed,,,,,,,,
+Freshmen Filing Original Application: 1 School ,"1,193,294","1,183,276","1,120,604","701,028","468,152","266,258","4,932,612","4,892,187"
+Freshmen Filing Original Application: 2 Schools ,"327,557","158,346","109,877","72,675","35,477","16,029","719,961","867,142"
+Freshmen Filing Original Application: 3 Schools ,"245,465","75,699","46,971","35,124","15,214","5,891","424,364","439,763"
+Freshmen Filing Original Application: 4 Schools ,"197,131","43,631","26,027","22,298","9,255","3,041","301,383","295,004"
+Freshmen Filing Original Application: 5 Schools ,"147,230","25,627","15,004","14,558","5,764","1,627","209,810","204,283"
+Freshmen Filing Original Application: 6 Schools ,"113,692","16,587","9,705","10,158","3,743",988,"154,873","150,238"
+Freshmen Filing Original Application: 7 Schools ,"82,741","10,067","6,262","6,937","2,493",707,"109,207","106,809"
+Freshmen Filing Original Application: 8 Schools ,"66,401","7,066","4,403","5,058","1,910",472,"85,310","83,394"
+Freshmen Filing Original Application: 9 Schools ,"52,165","5,313","3,750","4,032","1,481",379,"67,120","67,888"
+Freshmen Filing Original Application: 10 Schools ,"117,807","9,186","6,645","8,512","2,647",650,"145,447","128,443"
+Not Freshmen Filing Original Application: 1 School ,"5,503,229","3,603,928","2,092,824","624,705","345,600","163,961","12,334,247","11,742,828"
+Not Freshmen Filing Original Application: 2 Schools ,"579,950","335,845","169,611","61,245","27,631","11,762","1,186,044","1,537,638"
+Not Freshmen Filing Original Application: 3 Schools ,"243,068","122,928","60,563","24,456","10,032","3,910","464,957","550,393"
+Not Freshmen Filing Original Application: 4 Schools ,"138,182","61,741","30,032","13,095","5,003","1,863","249,916","281,819"
+Not Freshmen Filing Original Application: 5 Schools ,"84,439","33,863","16,622","7,376","2,844","1,006","146,150","161,457"
+Not Freshmen Filing Original Application: 6 Schools ,"53,046","19,829","9,817","4,906","1,767",631,"89,996","98,806"
+Not Freshmen Filing Original Application: 7 Schools ,"34,481","12,257","6,244","3,115","1,112",434,"57,643","63,781"
+Not Freshmen Filing Original Application: 8 Schools ,"24,702","8,373","4,240","2,215",806,266,"40,602","44,667"
+Not Freshmen Filing Original Application: 9 Schools ,"18,676","6,397","3,315","1,790",621,223,"31,022","34,605"
+Not Freshmen Filing Original Application: 10 Schools ,"34,823","9,623","5,141","3,070","1,067",320,"54,044","53,563"
+Parent (Dependent) Tax Filing Status and IRS Data Retrieval Tool Usage,,,,,,,,
+Not Going to File Taxes,"278,727","153,063","110,787","45,963","25,843","13,755","628,138","669,865"
+Will File but Have Not Yet Completed Taxes,"2,293,744","175,663","65,055","9,954","5,201","1,304","2,550,921","869,957"
+Already Filed Taxes: IRS Data Not Transferred,"1,955,905","1,361,896","682,172","221,513","109,327","49,130","4,379,943","5,016,648"
+Already Filed Taxes: IRS Data Transferred,"328,323","469,020","297,834","106,984","61,446","32,294","1,295,901","2,496,042"
+Tax Filing Status Unknown,"68,971","56,269","53,462","29,440","13,135","6,291","227,568","115,498"
+Student (Independent) Tax Filing Status and IRS Data Retrieval Tool Usage,,,,,,,,
+Not Going to File Taxes,"861,070","587,079","499,576","274,753","164,221","91,068","2,477,767","2,454,641"
+Will File but Have Not Yet Completed Taxes,"1,210,282","147,617","65,535","24,735","14,711","4,492","1,467,372","563,478"
+Already Filed Taxes: IRS Data Not Transferred,"1,690,596","1,615,268","1,055,356","478,195","282,236","145,736","5,267,387","5,074,627"
+Already Filed Taxes: IRS Data Transferred,"570,260","1,183,345","917,459","434,323","266,367","136,285","3,508,039","4,542,249"
+Tax Filing Status Unknown,201,362,421,493,132,63,"1,672","1,703"
+Application Completion Times (Minutes:Seconds) Among Non-Users of the IRS Data Retrieval Tool,,,,,,,,
+All Applicants,30:12,26:41,25:40,26:43,24:23,21:25,28:15,N/A
+"Dependent, Original, and Full Form",44:51,39:17,38:05,40:42,37:54,31:51,42:37,N/A
+"Dependent, Original, and EZ Form",36:36,33:30,32:57,34:30,31:38,26:40,34:45,N/A
+"Dependent, Renewal, and Full Form",33:45,33:08,32:02,33:03,28:16,25:48,33:24,N/A
+"Dependent, Renewal, and EZ Form",21:36,22:15,22:04,23:11,19:55,17:55,21:50,N/A
+"Independent, Original, and Full Form",25:08,24:23,24:14,24:29,22:48,20:36,24:19,N/A
+"Independent, Original, and EZ Form",20:10,20:15,20:15,20:23,18:45,16:36,19:57,N/A
+"Independent, Renewal, and Full Form",19:04,18:40,18:02,18:28,15:22,14:07,18:45,N/A
+"Independent, Renewal, and EZ Form",13:19,13:50,13:48,14:11,11:41,10:33,13:30,N/A
+Data definitions and notes available at: www.StudentAid.gov/FAFSA-data,,,,,,,,
