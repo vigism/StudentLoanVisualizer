@@ -37,7 +37,7 @@ let ageInfoSorted = ageInfo.sort((a, b) => (a.year > b.year) ? 1 : -1)
 
 let data = ageInfoSorted;
 
-let svg = d3.select("svg");
+let svg = d3.select(".first");
 
 svg.selectAll("circle")
 .data(data)
@@ -45,5 +45,39 @@ svg.selectAll("circle")
 .append("circle")
 .attr("cx", function(d,i) {return (i+1)*200})
 .attr("cy", function(d) {return 110})
-.attr("r", function(d) {return (parseFloat(d['18 or less'].replace(/,/g, ''))-1000000) /10000})
+.attr("r", function(d) {return (parseFloat(d['18 or less'].replace(/,/g, ''))) /100000})
+ 
+
+
+ svg = d3.select(".second");
+
+svg.selectAll("circle")
+.data(data)
+.enter()
+.append("circle")
+.attr("cx", function(d,i) {return (i+1)*200})
+.attr("cy", function(d) {return 110})
+.attr("r", function(d) {return (parseFloat(d['19 through 24'].replace(/,/g, '')))/100000})
+ 
+
+svg = d3.select(".third");
+
+svg.selectAll("circle")
+.data(data)
+.enter()
+.append("circle")
+.attr("cx", function(d,i) {return (i+1)*200})
+.attr("cy", function(d) {return 110})
+.attr("r", function(d) {return (parseFloat(d['25 or greater'].replace(/,/g, '')))/100000})
+ 
+
+svg = d3.select(".fourth");
+
+svg.selectAll("circle")
+.data(data)
+.enter()
+.append("circle")
+.attr("cx", function(d,i) {return (i+1)*200})
+.attr("cy", function(d) {return 110})
+.attr("r", function(d) {return (parseFloat(d['Age Unknown'].replace(/,/g, '')))/20})
  
