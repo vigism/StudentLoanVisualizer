@@ -9,16 +9,18 @@ for(let i = 6; i<18; i++) {
     }
 }
 
+
 function receivedData(data) {
     console.log(data);
 }   
+
 
 function receiveFafsaData(data, yr) {
     let parsedData = [];
     for(let i = 0; i < data.length; i++) {
         let cur = {};
         let values = Object.values(data[i]);
-        cur[values[0]] = values[1] 
+        cur[values[0]] = values[1];
         parsedData.push(cur);
     }
     console.log(yr);
@@ -33,7 +35,7 @@ function receiveFafsaData(data, yr) {
     console.log(ageInfo);
 }
 debugger;
-let ageInfoSorted = ageInfo.sort((a, b) => (a.year > b.year) ? 1 : -1)
+let ageInfoSorted = ageInfo.sort((a, b) => (a.year > b.year) ? 1 : -1);
 
 let data = ageInfoSorted;
 
@@ -45,7 +47,10 @@ svg.selectAll("circle")
 .append("circle")
 .attr("cx", function(d,i) {return (i+1)*200})
 .attr("cy", function(d) {return 110})
+.transition()
+.duration(1000)
 .attr("r", function(d) {return (parseFloat(d['18 or less'].replace(/,/g, ''))) /100000})
+.delay(function(d,i){return(i*100)})
  
 
 
@@ -57,7 +62,10 @@ svg.selectAll("circle")
 .append("circle")
 .attr("cx", function(d,i) {return (i+1)*200})
 .attr("cy", function(d) {return 110})
+.transition()
+.duration(1000)
 .attr("r", function(d) {return (parseFloat(d['19 through 24'].replace(/,/g, '')))/100000})
+.delay(function(d,i){return(i*100)})
  
 
 svg = d3.select(".third");
@@ -68,7 +76,10 @@ svg.selectAll("circle")
 .append("circle")
 .attr("cx", function(d,i) {return (i+1)*200})
 .attr("cy", function(d) {return 110})
+.transition()
+.duration(1000)
 .attr("r", function(d) {return (parseFloat(d['25 or greater'].replace(/,/g, '')))/100000})
+.delay(function(d,i){return(i*100)})
  
 
 svg = d3.select(".fourth");
@@ -79,5 +90,8 @@ svg.selectAll("circle")
 .append("circle")
 .attr("cx", function(d,i) {return (i+1)*200})
 .attr("cy", function(d) {return 110})
+.transition()
+.duration(1000)
 .attr("r", function(d) {return (parseFloat(d['Age Unknown'].replace(/,/g, '')))/20})
+.delay(function(d,i){return(i*100)})
  
