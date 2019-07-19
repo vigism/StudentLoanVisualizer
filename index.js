@@ -68,6 +68,8 @@ svg.selectAll(".bar")
     .attr("class", "bar")
     .attr("x", function(d){ return x(d.year)})
     .attr("width", x.bandwidth())
+    .transition()
+    .duration(1000)
     .attr("y", function(d){return y(parseFloat(d['18 or less'].replace(/,/g, '')))})
     .attr("height", function(d){ return height - y(parseFloat(d['18 or less'].replace(/,/g, '')))});
 
@@ -80,17 +82,9 @@ svg.append("g")
 svg.append("g")
 .call(d3.axisLeft(y));
 
-// svg.selectAll("circle")
-// .data(data)
-// .enter()
-// .append("circle")
-// .attr("cx", function(d,i) {return (i+1)*200})
-// .attr("cy", function(d) {return 110})
-// .transition()
-// .duration(1000)
-// .attr("r", function(d) {return (parseFloat(d['18 or less'].replace(/,/g, ''))) /100000})
-// .delay(function(d,i){return(i*100)})
- 
+
+
+
 svg = d3.select(".second");
 
 svg.attr("width", width+margin.left + margin.right)
@@ -109,6 +103,8 @@ svg.selectAll(".bar")
     .attr("class", "bar")
     .attr("x", function(d){ return x(d.year)})
     .attr("width", x.bandwidth())
+    .transition()
+    .duration(1000)
     .attr("y", function(d){return y(parseFloat(d['19 through 24'].replace(/,/g, '')))})
     .attr("height", function(d){ return height - y(parseFloat(d['19 through 24'].replace(/,/g, '')))});
 
@@ -121,21 +117,8 @@ svg.append("g")
 svg.append("g")
 .call(d3.axisLeft(y));
 
-//  svg = d3.select(".second");
 
-// svg.selectAll("circle")
-// .data(data)
-// .enter()
-// .append("circle")
-// .transition()
-// .delay(1500)
-// .attr("cx", function(d,i) {return (i+1)*200})
-// .attr("cy", function(d) {return 110})
-// .transition()
-// .duration(1000)
-// .attr("r", function(d) {return (parseFloat(d['19 through 24'].replace(/,/g, '')))/100000})
-// .delay(function(d,i){return(i*100)})
-  svg = d3.select(".third");
+svg = d3.select(".third");
 
 svg.attr("width", width+margin.left + margin.right)
     .attr("height", height+margin.top + margin.bottom)
@@ -153,6 +136,8 @@ svg.selectAll(".bar")
     .attr("class", "bar")
     .attr("x", function(d){ return x(d.year)})
     .attr("width", x.bandwidth())
+    .transition()
+    .duration(1000)
     .attr("y", function(d){return y(parseFloat(d['25 or greater'].replace(/,/g, '')))})
     .attr("height", function(d){ return height - y(parseFloat(d['25 or greater'].replace(/,/g, '')))});
 
@@ -161,22 +146,13 @@ svg.append("g")
 .attr("transform", "translate(0," + height + ")")
 .call(d3.axisBottom(x));
 
-// add the y Axis
+
+ 
+
 svg.append("g")
 .call(d3.axisLeft(y));
-// svg = d3.select(".third");
 
-// svg.selectAll("circle")
-// .data(data)
-// .enter()
-// .append("circle")
-// .attr("cx", function(d,i) {return (i+1)*200})
-// .attr("cy", function(d) {return 110})
-// .transition()
-// .duration(1000)
-// .attr("r", function(d) {return (parseFloat(d['25 or greater'].replace(/,/g, '')))/100000})
-// .delay(function(d,i){return(i*100)})
- 
+
  svg = d3.select(".fourth");
 
 svg.attr("width", width+margin.left + margin.right)
@@ -195,6 +171,8 @@ svg.selectAll(".bar")
     .attr("class", "bar")
     .attr("x", function(d){ return x(d.year)})
     .attr("width", x.bandwidth())
+    .transition()
+    .duration(1000)
     .attr("y", function(d){return y(parseFloat(d['Age Unknown'].replace(/,/g, '')))})
     .attr("height", function(d){ return height - y(parseFloat(d['Age Unknown'].replace(/,/g, '')))});
 
@@ -206,16 +184,39 @@ svg.append("g")
 // add the y Axis
 svg.append("g")
 .call(d3.axisLeft(y));
-// svg = d3.select(".fourth");
 
-// svg.selectAll("circle")
-// .data(data)
-// .enter()
-// .append("circle")
-// .attr("cx", function(d,i) {return (i+1)*200})
-// .attr("cy", function(d) {return 110})
-// .transition()
-// .duration(1000)
-// .attr("r", function(d) {return (parseFloat(d['Age Unknown'].replace(/,/g, '')))/20})
-// .delay(function(d,i){return(i*100)})
- 
+document.getElementById("update").onclick = click;
+
+function click() {
+   svg = d3.select("first");
+   svg.attr("width", width+margin.left + margin.right)
+    .attr("height", height+margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", 
+        "translate("+margin.left+","+margin.top + ")");
+
+x.domain(data.map(function(d) { return d.year; }));
+y.domain([0, d3.max(data, function(d) { return parseFloat(d['Age Unknown'].replace(/,/g, '')); })]);
+
+
+svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d){ return x(d.year)})
+    .attr("width", x.bandwidth())
+    .transition()
+    .duration(1000)
+    .attr("y", function(d){return y(parseFloat(d['Age Unknown'].replace(/,/g, '')))})
+    .attr("height", function(d){ return height - y(parseFloat(d['Age Unknown'].replace(/,/g, '')))});
+
+// add the x Axis
+svg.append("g")
+.attr("transform", "translate(0," + height + ")")
+.call(d3.axisBottom(x));
+
+// add the y Axis
+svg.append("g")
+.call(d3.axisLeft(y));
+
+}
