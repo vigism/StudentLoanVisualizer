@@ -39,59 +39,183 @@ let ageInfoSorted = ageInfo.sort((a, b) => (a.year > b.year) ? 1 : -1);
 
 let data = ageInfoSorted;
 
+var margin = {top: 20, right:20, bottom: 30, left: 40}
+var width = 960-margin.left - margin.right;
+var height = 500 - margin.top - margin.bottom;
+
+var x = d3.scaleBand()
+        .range([0,width])
+        .padding(0.1);
+
+var y = d3.scaleLinear()
+        .range([height,0]);
+
 let svg = d3.select(".first");
 
-svg.selectAll("circle")
-.data(data)
-.enter()
-.append("circle")
-.attr("cx", function(d,i) {return (i+1)*200})
-.attr("cy", function(d) {return 110})
-.transition()
-.duration(1000)
-.attr("r", function(d) {return (parseFloat(d['18 or less'].replace(/,/g, ''))) /100000})
-.delay(function(d,i){return(i*100)})
+svg.attr("width", width+margin.left + margin.right)
+    .attr("height", height+margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", 
+        "translate("+margin.left+","+margin.top + ")");
+
+x.domain(data.map(function(d) { return d.year; }));
+y.domain([0, d3.max(data, function(d) { return parseFloat(d['18 or less'].replace(/,/g, '')); })]);
+
+
+svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d){ return x(d.year)})
+    .attr("width", x.bandwidth())
+    .attr("y", function(d){return y(parseFloat(d['18 or less'].replace(/,/g, '')))})
+    .attr("height", function(d){ return height - y(parseFloat(d['18 or less'].replace(/,/g, '')))});
+
+// add the x Axis
+svg.append("g")
+.attr("transform", "translate(0," + height + ")")
+.call(d3.axisBottom(x));
+
+// add the y Axis
+svg.append("g")
+.call(d3.axisLeft(y));
+
+// svg.selectAll("circle")
+// .data(data)
+// .enter()
+// .append("circle")
+// .attr("cx", function(d,i) {return (i+1)*200})
+// .attr("cy", function(d) {return 110})
+// .transition()
+// .duration(1000)
+// .attr("r", function(d) {return (parseFloat(d['18 or less'].replace(/,/g, ''))) /100000})
+// .delay(function(d,i){return(i*100)})
  
+svg = d3.select(".second");
+
+svg.attr("width", width+margin.left + margin.right)
+    .attr("height", height+margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", 
+        "translate("+margin.left+","+margin.top + ")");
+
+x.domain(data.map(function(d) { return d.year; }));
+y.domain([0, d3.max(data, function(d) { return parseFloat(d['19 through 24'].replace(/,/g, '')); })]);
 
 
- svg = d3.select(".second");
+svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d){ return x(d.year)})
+    .attr("width", x.bandwidth())
+    .attr("y", function(d){return y(parseFloat(d['19 through 24'].replace(/,/g, '')))})
+    .attr("height", function(d){ return height - y(parseFloat(d['19 through 24'].replace(/,/g, '')))});
 
-svg.selectAll("circle")
-.data(data)
-.enter()
-.append("circle")
-.attr("cx", function(d,i) {return (i+1)*200})
-.attr("cy", function(d) {return 110})
-.transition()
-.duration(1000)
-.attr("r", function(d) {return (parseFloat(d['19 through 24'].replace(/,/g, '')))/100000})
-.delay(function(d,i){return(i*100)})
+// add the x Axis
+svg.append("g")
+.attr("transform", "translate(0," + height + ")")
+.call(d3.axisBottom(x));
+
+// add the y Axis
+svg.append("g")
+.call(d3.axisLeft(y));
+
+//  svg = d3.select(".second");
+
+// svg.selectAll("circle")
+// .data(data)
+// .enter()
+// .append("circle")
+// .transition()
+// .delay(1500)
+// .attr("cx", function(d,i) {return (i+1)*200})
+// .attr("cy", function(d) {return 110})
+// .transition()
+// .duration(1000)
+// .attr("r", function(d) {return (parseFloat(d['19 through 24'].replace(/,/g, '')))/100000})
+// .delay(function(d,i){return(i*100)})
+  svg = d3.select(".third");
+
+svg.attr("width", width+margin.left + margin.right)
+    .attr("height", height+margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", 
+        "translate("+margin.left+","+margin.top + ")");
+
+x.domain(data.map(function(d) { return d.year; }));
+y.domain([0, d3.max(data, function(d) { return parseFloat(d['25 or greater'].replace(/,/g, '')); })]);
+
+
+svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d){ return x(d.year)})
+    .attr("width", x.bandwidth())
+    .attr("y", function(d){return y(parseFloat(d['25 or greater'].replace(/,/g, '')))})
+    .attr("height", function(d){ return height - y(parseFloat(d['25 or greater'].replace(/,/g, '')))});
+
+// add the x Axis
+svg.append("g")
+.attr("transform", "translate(0," + height + ")")
+.call(d3.axisBottom(x));
+
+// add the y Axis
+svg.append("g")
+.call(d3.axisLeft(y));
+// svg = d3.select(".third");
+
+// svg.selectAll("circle")
+// .data(data)
+// .enter()
+// .append("circle")
+// .attr("cx", function(d,i) {return (i+1)*200})
+// .attr("cy", function(d) {return 110})
+// .transition()
+// .duration(1000)
+// .attr("r", function(d) {return (parseFloat(d['25 or greater'].replace(/,/g, '')))/100000})
+// .delay(function(d,i){return(i*100)})
  
+ svg = d3.select(".fourth");
 
-svg = d3.select(".third");
+svg.attr("width", width+margin.left + margin.right)
+    .attr("height", height+margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", 
+        "translate("+margin.left+","+margin.top + ")");
 
-svg.selectAll("circle")
-.data(data)
-.enter()
-.append("circle")
-.attr("cx", function(d,i) {return (i+1)*200})
-.attr("cy", function(d) {return 110})
-.transition()
-.duration(1000)
-.attr("r", function(d) {return (parseFloat(d['25 or greater'].replace(/,/g, '')))/100000})
-.delay(function(d,i){return(i*100)})
- 
+x.domain(data.map(function(d) { return d.year; }));
+y.domain([0, d3.max(data, function(d) { return parseFloat(d['Age Unknown'].replace(/,/g, '')); })]);
 
-svg = d3.select(".fourth");
 
-svg.selectAll("circle")
-.data(data)
-.enter()
-.append("circle")
-.attr("cx", function(d,i) {return (i+1)*200})
-.attr("cy", function(d) {return 110})
-.transition()
-.duration(1000)
-.attr("r", function(d) {return (parseFloat(d['Age Unknown'].replace(/,/g, '')))/20})
-.delay(function(d,i){return(i*100)})
+svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d){ return x(d.year)})
+    .attr("width", x.bandwidth())
+    .attr("y", function(d){return y(parseFloat(d['Age Unknown'].replace(/,/g, '')))})
+    .attr("height", function(d){ return height - y(parseFloat(d['Age Unknown'].replace(/,/g, '')))});
+
+// add the x Axis
+svg.append("g")
+.attr("transform", "translate(0," + height + ")")
+.call(d3.axisBottom(x));
+
+// add the y Axis
+svg.append("g")
+.call(d3.axisLeft(y));
+// svg = d3.select(".fourth");
+
+// svg.selectAll("circle")
+// .data(data)
+// .enter()
+// .append("circle")
+// .attr("cx", function(d,i) {return (i+1)*200})
+// .attr("cy", function(d) {return 110})
+// .transition()
+// .duration(1000)
+// .attr("r", function(d) {return (parseFloat(d['Age Unknown'].replace(/,/g, '')))/20})
+// .delay(function(d,i){return(i*100)})
  
